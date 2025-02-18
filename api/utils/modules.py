@@ -12,9 +12,12 @@ from haystack.components.rankers import TransformersSimilarityRanker
 from haystack import Pipeline
 from dotenv import load_dotenv
 import os
+from pathlib import Path
+env_path = Path(__file__).resolve().parents[2] / ".env"  # Navigate up to project root
+load_dotenv(dotenv_path=env_path)
+
 
 # Load API Token
-load_dotenv()
 api_token = os.getenv("TOGETHER_TOKEN")
 elasticsearch_url =os.getenv('ELASTICSEARCH_URL')
 elasticsearch_username=os.getenv('ELASTICSEARCH_USERNAME')

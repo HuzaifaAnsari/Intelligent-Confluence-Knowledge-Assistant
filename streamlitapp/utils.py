@@ -3,10 +3,13 @@ from dotenv import load_dotenv
 import os
 import requests
 from requests.auth import HTTPBasicAuth
-load_dotenv()
+
 from haystack.components.retrievers import FilterRetriever
 from haystack_integrations.document_stores.elasticsearch import ElasticsearchDocumentStore
 
+from pathlib import Path
+env_path = Path(__file__).resolve().parents[2] / ".env"  # Navigate up to project root
+load_dotenv(dotenv_path=env_path)
 
 confluence_api_token = os.getenv('CONFLUENCE_API_TOKEN')
 confluence_username = os.getenv('CONFLUENCE_USERNAME')

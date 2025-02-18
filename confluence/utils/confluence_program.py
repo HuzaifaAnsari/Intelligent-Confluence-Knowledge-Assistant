@@ -8,7 +8,10 @@ from docx.shared import Pt, RGBColor
 from docx.oxml.ns import qn
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from bs4 import BeautifulSoup
-load_dotenv()
+
+from pathlib import Path
+env_path = Path(__file__).resolve().parents[2] / ".env"  # Navigate up to project root
+load_dotenv(dotenv_path=env_path)
 
 confluence_api_token = os.getenv('CONFLUENCE_API_TOKEN')
 confluence_username = os.getenv('CONFLUENCE_USERNAME')
