@@ -83,5 +83,5 @@ streamlit run Home.py
 Contributions are welcome! Feel free to submit a pull request or open an issue.
 
 ## Contact
-For questions or support, reach out to [huzaifamuqeem@gmail.com or GitHub profile].
+For questions or support, reach out to [Email](huzaifamuqeem@gmail.com) or [GitHub profile](https://github.com/HuzaifaAnsari).
 
